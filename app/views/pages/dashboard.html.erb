@@ -1,0 +1,36 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	Add Task
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<%= render 'tasks/form', task: @task %>
+	</div>		
+</div>
+
+<div class= "container">
+	<div class= "row">
+
+		<div class= "col-md-3 border shadow">
+			<h5>Backlog</h5>
+			<%= render 'tasks/show_card', task: @task %>
+		</div>
+
+		<div class= "col-md-3 border shadow">
+			<h5>Inprogress</h5>
+     
+		</div>
+
+		<div class= "col-md-3 border shadow">
+			<h5>Under Review</h5>
+
+		</div>
+
+		<div class= "col-md-3 border shadow">
+			<h5>Complete</h5>
+
+		</div>
+
+	</div>
+</div>
