@@ -1,4 +1,4 @@
-<div class="modal-content">
+<div class="modal-content" >
   <%= form_with(model: task, remote: true) do |form| %>
   
   <div class="modal-header">
@@ -26,7 +26,7 @@
 
     <div class="form-group">
       <%= form.label :date %>
-      <%= form.date_select :date %>
+      <%= form.date_field :date %>
     </div>
   </div>
 
