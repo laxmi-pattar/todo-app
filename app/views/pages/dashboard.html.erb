@@ -12,26 +12,35 @@
 <div class= "container">
 	<div class= "row">
 
-		<div class= "col-md-3 border shadow" id="bucket1">
+		<div class= "col-md-3 border shadow">
 			<h5>Backlog</h5>
-			<% @tasks.each do |task| %>
+			<div class="droppable" id="bucket1">
+				<% @tasks.each do |task| %>
 				<%= render 'tasks/show_card', task: task %>
-			<% end %>
+				<% end %>
+			</div>
 		</div>
 
-		<div class= "col-md-3 border shadow" id="bucket2">
+		<div class= "col-md-3 border shadow">
 			<h5>Inprogress</h5>
-			<%= render 'tasks/show_card', task: @task %>
+			<div class="droppable" id="bucket2">
+
+			</div>
 		</div>
 
-		<div class= "col-md-3 border shadow" id="bucket3">
+		<div class= "col-md-3 border shadow">
 			<h5>Under Review</h5>
-			<%= render 'tasks/show_card', task: @task %>
+			<div class="droppable" id="bucket3">
+
+			</div>
 		</div>
 
-		<div class= "col-md-3 border shadow" id="bucket4">
+		<div class= "col-md-3 border shadow">
 			<h5>Complete</h5>
-			<%= render 'tasks/show_card', task: @task %>
+			<div class="droppable" id="bucket4">
+
+
+			</div>
 		</div>
 
 	</div>

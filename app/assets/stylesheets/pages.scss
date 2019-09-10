@@ -8,3 +8,11 @@
 .btn {
 margin-top: 15px;	
 }
+
+.draggable {
+	z-index: 3;
+}
+
+.droppable {
+	min-height: 300px;
+}

@@ -18,3 +18,11 @@
 body {
 	background-color: #DDD;
 }
+
+.draggable {
+	z-index: 3;
+}
+
+.droppable {
+	min-height: 300px;
+}
