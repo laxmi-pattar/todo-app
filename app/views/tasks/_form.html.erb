@@ -1,5 +1,5 @@
 <div class="modal-content" >
-  <%= form_with(model: task, remote: true) do |form| %>
+  <%= form_for @task, remote: true do |form| %>
   
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalLabel">Create a New Task</h5>
@@ -32,7 +32,7 @@
 
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="button" data-dismiss="modal">Close</button>
       <%= form.submit "Submit" %>
   </div>
 

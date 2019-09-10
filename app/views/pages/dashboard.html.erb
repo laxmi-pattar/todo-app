@@ -14,21 +14,24 @@
 
 		<div class= "col-md-3 border shadow" id="bucket1">
 			<h5>Backlog</h5>
+			<% @tasks.each do |task| %>
+				<%= render 'tasks/show_card', task: task %>
+			<% end %>
 		</div>
 
-		<div class= "col-md-3 border shadow">
+		<div class= "col-md-3 border shadow" id="bucket2">
 			<h5>Inprogress</h5>
-     
+			<%= render 'tasks/show_card', task: @task %>
 		</div>
 
-		<div class= "col-md-3 border shadow">
+		<div class= "col-md-3 border shadow" id="bucket3">
 			<h5>Under Review</h5>
-
+			<%= render 'tasks/show_card', task: @task %>
 		</div>
 
-		<div class= "col-md-3 border shadow">
+		<div class= "col-md-3 border shadow" id="bucket4">
 			<h5>Complete</h5>
-
+			<%= render 'tasks/show_card', task: @task %>
 		</div>
 
 	</div>

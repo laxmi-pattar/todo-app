@@ -18,3 +18,4 @@
 //= require activestorage
 //= require turbolinks
 //= require drag_and_drop
+//= require_tree .
