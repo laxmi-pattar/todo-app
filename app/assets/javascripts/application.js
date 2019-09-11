@@ -19,4 +19,3 @@
 //= require turbolinks
 //= require jquery-ui
 //= require drag_and_drop
-//= require_tree .

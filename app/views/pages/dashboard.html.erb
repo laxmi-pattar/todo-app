@@ -1,3 +1,4 @@
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
 	Add Task
@@ -8,38 +9,42 @@
 		<%= render 'tasks/form', task: @task %>
 	</div>		
 </div>
-
 <div class= "container">
 	<div class= "row">
 
 		<div class= "col-md-3 border shadow">
 			<h5>Backlog</h5>
-			<div class="droppable" id="bucket1">
-				<% @tasks.each do |task| %>
-				<%= render 'tasks/show_card', task: task %>
+			<div class="droppable" id="backlog">
+				<% @tasks.where(status: :backlog).each do |task| %>
+					<%= render 'tasks/show_card', task: task %>
 				<% end %>
 			</div>
 		</div>
 
 		<div class= "col-md-3 border shadow">
 			<h5>Inprogress</h5>
-			<div class="droppable" id="bucket2">
-
+			<div class="droppable" id="inprogress">
+				<% @tasks.where(status: :inprogress).each do |task| %>
+					<%= render 'tasks/show_card', task: task %>
+				<% end %>
 			</div>
 		</div>
 
 		<div class= "col-md-3 border shadow">
 			<h5>Under Review</h5>
-			<div class="droppable" id="bucket3">
-
+			<div class="droppable" id="under_review">
+				<% @tasks.where(status: :under_review).each do |task| %>
+					<%= render 'tasks/show_card', task: task %>
+				<% end %>
 			</div>
 		</div>
 
 		<div class= "col-md-3 border shadow">
-			<h5>Complete</h5>
-			<div class="droppable" id="bucket4">
-
-
+			<h5>Completed</h5>
+			<div class="droppable" id="completed">
+				<% @tasks.where(status: :completed).each do |task| %>
+					<%= render 'tasks/show_card', task: task %>
+				<% end %>
 			</div>
 		</div>
 

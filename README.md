@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+- Add a status column to tasks
+- implement ajax update to update task status
+- render tasks with different status in the dashboard
